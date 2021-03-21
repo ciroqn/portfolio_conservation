@@ -1,0 +1,503 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.site-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr 3fr 1fr;
+  grid-template-rows: 11rem 53rem auto auto auto 15rem 29rem;
+  grid-template-areas:
+    "header header header header"
+    "banner banner banner banner"
+    ". mission ceo ."
+    "membership membership membership membership"
+    ". gallery gallery ."
+    "contact contact contact contact"
+    "footer footer footer footer";
+  grid-column-gap: 15px;
+}
+
+h1, h2, h3 {
+  font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+p, ul li, button {
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 1.4rem;
+}
+
+ul li, .membership-info {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.img-container img, .ceo-container .img-container img {
+  box-shadow: 2px 2px 3px rgba(104, 104, 104, 0.8);
+}
+
+.contact-container h3 {
+  margin: 2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+  background-color: #405952;
+  border-bottom: 2px solid black;
+  grid-area: header;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+header #logo {
+  height: 10rem;
+  padding: 15px;
+}
+
+header h1 {
+  text-shadow: 1px 1px black;
+}
+
+header h1 span.underline {
+  border-bottom: solid 1px black;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+}
+
+header ul li {
+  margin-right: 3rem;
+  text-align: center;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 17px 20px;
+}
+
+header ul a:hover {
+  text-decoration: none;
+  background: #1b1e23;
+  border-radius: 5px;
+  color: white;
+}
+
+/* Banner Section */
+.banner {
+  grid-area: banner;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-image: url('images/de-klerk-rhino.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  bottom: 10px;
+  width: 100%;
+}
+
+.banner .banner-titles {
+  background-color: rgba(64, 89, 82, 0.2);
+  border-radius: 5px;
+  color: white;
+  position: relative;
+  left: 5rem;
+  bottom: 7rem;
+  padding: 3rem;
+}
+
+/* About Section */
+
+.mission {
+  position: relative;
+  grid-area: mission;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0;
+}
+
+.mission .mission-message {
+  line-height: 2.5rem;
+}
+
+.mission .mission-message h1 {
+  margin-bottom: 2rem;
+}
+
+.ceo-container {
+  text-align: center;
+  border: 5px solid #405952;
+  border-radius: 5px;
+  padding: 10px;
+  background: rgba(104, 104, 104, 0.2);
+  margin-left: 1rem;
+  margin-bottom: 4rem;
+}
+
+.ceo-container h2 {
+  padding: 1rem;
+}
+
+.ceo-container .img-container img {
+  height: 13rem;
+  border-radius: 5px;
+}
+
+.ceo {
+  grid-area: ceo;
+  margin-top: 3rem;
+}
+
+/* Membership Section */
+
+.membership {
+  background: rgba(64, 89, 82, 0.2);
+  background-image: url('images/kiran-anklekar-bohms.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-area: membership;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.membership-info {
+  background: rgba(64, 89, 82, 0.5);
+  height: 34rem;
+  padding: 3rem;
+  text-align: center;
+  border-left: 3px solid #405952;
+}
+
+.membership-info ul li {
+  padding-top: 1rem;
+}
+
+.membership .img-info {
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.img-info p {
+  margin: 0;
+}
+
+/* Gallery Section */
+.gallery {
+  grid-area: gallery;
+  margin: 4rem 0;
+  position: relative;
+}
+
+.img-container img {
+  height: 200px;
+  margin: 1rem;
+}
+
+.img-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery h3 {
+  text-align: center;
+}
+
+/* Contact Section*/
+
+.contact {
+  background: rgba(64, 89, 82, 0.2);
+  grid-area: contact;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.contact .contact-container {
+  text-align: center;
+}
+
+.contact .contact-container p a {
+  margin: 1rem;
+}
+
+.contact-container img {
+  height: 3rem;
+}
+
+/* Footer section */
+
+footer {
+  background: rgba(64, 89, 82, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: footer;
+  font-size: 0.7rem;
+  position: relative;
+}
+
+footer .footer-info-container, footer .footer-info-container-two {
+  font-size: 0.7rem;
+  width: 45%;
+  margin: 10px;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1270px) {
+  header span {
+    display: none;
+  }
+
+  header {
+    justify-content: center;
+  }
+
+  header #logo {
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 923px) {
+  header {
+    flex-direction: column;
+  }
+
+  .banner .banner-titles {
+    bottom: 3rem;
+  }
+
+  .membership {
+    justify-content: center;
+  }
+
+  .membership-info {
+    background: rgba(64, 89, 82, 0.6);
+    border-left: none;
+    height: auto;
+}
+}
+
+@media only screen and (max-width: 775px) {
+  header h1 span {
+    display: inline-block;
+  }
+
+  .banner {
+    display: none;
+  }
+
+.site-container {
+  grid-template-rows: 11rem auto auto 25rem auto 15rem 29rem;
+  grid-template-areas:
+    "header header header header"
+    ". ceo ceo ."
+    ". mission mission ."
+    "membership membership membership membership"
+    ". gallery gallery ."
+    "contact contact contact contact"
+    "footer footer footer footer";
+}
+
+.ceo {
+  position: relative;
+  top: 7rem;  /*to offset the height taken up by the fixed header/navbar*/
+}
+
+.mission .mission-message {
+  margin-bottom: 3rem;
+  position: relative;
+  top: 3rem;
+  text-align: center;
+}
+}
+
+@media only screen and (max-width: 735px) {
+  header {
+    position: relative;
+    height: 38rem;
+  }
+
+  header ul {
+    flex-direction: column;
+  }
+
+  header h1 span.underline {
+    border-bottom: none;
+  }
+
+  header ul li.mob-bg {
+    border-radius: 5px;
+    background-color: rgb(64, 100, 90);
+  }
+
+  header ul a:hover {
+    background: none;
+    color: black;
+  }
+
+  header ul li {
+    margin: 2rem;
+    width: 15rem;
+  }
+
+  .mission .mission-message {
+    top: 0;
+    margin: 0;
+  }
+
+  .mission, .ceo, .membership, .gallery, .contact, footer {   /*note this is to move everything down, to compensate for the widening of the navbar (vertical), so all containers/main divs need to be set to a relative position.*/
+    top: 28rem;
+  }
+
+  header h1 #logo {
+    height: 8rem;
+  }
+
+  header h1 span {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  header h1 #logo {
+    display: none;
+  }
+
+  header h1 {
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .membership .img-info {
+    display: none;
+    color: white;
+  }
+
+  .membership {
+    background-image: none;
+    background: rgba(64, 89, 82, 0.8);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .membership-info {
+    background: rgba(64, 89, 82, 0);  /*opacity is zero, so NO backgorund colour...*/
+  }
+
+  .membership-info ul li.static {
+    display: none;
+  }
+
+  .site-container {
+    grid-template-rows: 11rem auto auto 25rem auto 15rem 42rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  header h1 span {
+    display: none
+  }
+
+  header h1 #logo {
+    display: block;
+    height: 9rem;
+    margin: auto;
+  }
+
+  .gallery img {
+    height: 150px;
+  }
+
+  .ceo .ceo-container .img-container, .ceo .ceo-container .img-container img {
+    display: none;
+  }
+
+  .ceo .ceo-container .ceo-message h2 {
+    font-size: 1.5rem;
+  }
+
+  .mission-message h1 {
+    font-size: 1.7rem;
+  }
+
+  .site-container {
+    grid-template-rows: 11rem auto auto 25rem auto 15rem 45rem;
+  }
+
+  .contact-container img {
+    height: 2.5rem;
+  }
+
+  .contact-container h3 {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  footer .footer-info-container, footer .footer-info-container-two {
+    width: 95%;
+  }
+
+
+@media only screen and (max-width: 335px) {
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .navbar {
+    max-width: 100%;   /*When viewport gets to be <300px, the navbar needs to be restricted so there is no horizontal scroll.*/
+  }
+
+  header ul li {
+    margin: 1rem 0;
+  }
+
+  .contact-container p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .site-container {
+    grid-template-rows: 11rem auto auto 25rem auto 15rem 50rem;
+  }
+
+  .contact-container img {
+    height: 1.8rem;
+  }
+}
